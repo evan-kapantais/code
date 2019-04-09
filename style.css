@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #C54469;
+}
+
+.container {
+  background: #fff;
+  text-align: center;
+  padding: 30px 0;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+#main > p {
+  margin: 0 20px;
+  font-size: 2em;
+  color: #999;
+}
+
+.numbers > input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid  #999;
+}
+
+.numbers > input::-webkit-inner-spin-button,
+.numbers > input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.btn {
+  background: #C54469;
+  color: white;
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  color: white;
+  position: relative;
+  transform: translateY(-4px);
+}

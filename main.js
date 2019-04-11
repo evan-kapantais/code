@@ -19,20 +19,23 @@
 
       if (index < inputs.length - 1) {
 
-        theCode.push(inputs[index].value);
+        // theCode.push(inputs[index].value);
         inputs[index].disabled = true;
         inputs[index + 1].disabled = false;
         inputs[index + 1].focus();
 
       } else {
 
-        theCode.push(inputs[index].value);
+        // theCode.push(inputs[index].value);
         inputs[index].disabled = true;
         submit.addEventListener("click", function(){
           alert(theCode.join(" - "));
           });
         submit.focus();
-      }      
+      }  
+
+      theCode.push(inputs[index].value);
+      console.log(theCode);
       
     } else {
       inputs[index].value = inputs[index].value.slice(0, 1);
@@ -48,6 +51,8 @@
       inputs[index - 1].value = "";
       inputs[index - 1].disabled = false;
       inputs[index - 1].focus();
+      theCode.pop();
+      console.log(theCode);
     }
   }
   

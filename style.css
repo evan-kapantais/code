@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -19,14 +20,14 @@ body {
   border-radius: 10px;
 }
 
-#main {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
 }
 
-#main > p {
+.flex > p {
   margin: 0 20px;
   font-size: 2em;
   color: #999;
@@ -34,9 +35,17 @@ body {
 
 .numbers > input {
   width: 50px;
-  height: 40px;
+  height: 50px;
   text-align: center;
   border: 2px solid  #999;
+}
+
+.numbers > input[disabled] {
+  background: #fff;
+}
+
+.numbers > input:focus {
+  background: rgb(255, 249, 250);
 }
 
 .numbers > input::-webkit-inner-spin-button,
@@ -45,13 +54,17 @@ body {
 }
 
 .btn {
-  background: #C54469;
-  color: white;
+  background: lightgrey;
+  color: #333;
   transition: all .2s ease;
 }
 
+.btn:focus {
+  background: #333;
+  color: #fff;
+}
+
 .btn:hover {
-  color: white;
   position: relative;
   transform: translateY(-4px);
 }

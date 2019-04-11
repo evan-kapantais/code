@@ -6,32 +6,26 @@
     <title>Code</title>
 </head>
 <body>
-    <!--
-        Build a verification code form.
-        Focusing on any input should bring the focus to the first empty input.
-        Entering a value should switch the focus to the next input.
-        Deleting a value should delete the last filled value.
-        Submitting the form should alert the submitted code.
-    -->
-    <div class="container">
-      <h1>Enter Code:</h1>
-      <form id="main">
+  <div class="container">
+    <h1>Enter Code:</h1>
+    <form id="main">
+      <div class="flex">
         <div class="numbers">
           <input type="number" />
-          <input type="number" />
-          <input type="number" />
-        </div>
-        <p class="dash">-</p>
+          <input type="number" disabled/>
+          <input type="number" disabled/>
+        </div>    
+        <p>-</p>
         <div class="numbers">
-          <input type="number" />
-          <input type="number" />
-          <input type="number" />
+          <input type="number" disabled/>
+          <input type="number" disabled/>
+          <input type="number" disabled/>
         </div>
       </div>
-      <button type="submit" class="btn btn-default" 
-      onclick="(event) => event.preventDefault()">Submit</button>
-    </div>
-
+    <button type="submit" class="btn btn-default" 
+    onclick="(event) => event.preventDefault()">Submit</button>
+  </form>  
+</div>
 
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
